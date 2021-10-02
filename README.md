@@ -1,6 +1,6 @@
 # Docker compose MYSQL
 
-For create a MYSQL container with the docker-compose.yml :
+To create a MYSQL container with the docker-compose.yml :
 
 > docker compose up -d
 
