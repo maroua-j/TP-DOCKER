@@ -1,4 +1,4 @@
-# Docker compose MYSQL & Wordpress & 
+# Docker compose MYSQL & Wordpress & Phpmyadmin
 
 To create a MYSQL container, a Wordpress container and a Phpmyadmin container with the docker-compose.yml :
 
