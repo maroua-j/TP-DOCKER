@@ -12,5 +12,21 @@ services:
       MYSQL_USER: root123
       MYSQL_PASSWORD: azerty
 
+  wordpress:
+    depends_on:
+      - db
+    image: wordpress:latest
+    volumes:
+      - wordpress_data:/var/www/html
+    ports:
+      - "8000:80"
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: root123
+      WORDPRESS_DB_PASSWORD: azerty
+      WORDPRESS_DB_NAME: mydb
+
 volumes:
-  db_data: {}
+  db_data: { }
+  wordpress_data: { }
