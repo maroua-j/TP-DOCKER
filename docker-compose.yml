@@ -1,38 +1,16 @@
-version: '3'
+version: "3.9"
+
 services:
-  mysql:
-    image: mysql:latest
-    container_name: tp-mysql
-    #command: --default-authentication-plugin=mysql_native_password
+  db:
+    image: mysql:5.7
+    volumes:
+      - db_data:/var/lib/mysql
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: azerty
       MYSQL_DATABASE: mydb
       MYSQL_USER: root123
       MYSQL_PASSWORD: azerty
-    ports:
-      - 8091:3306
-    volumes:
-      - mysql_db_data_container:/var/lib/mysql
-
-  wordpress:
-    depends_on:
-      - mysql
-    image: wordpress:latest 
-    container_name: wordpress
-    ports:
-      - "80:80"
-    # networks:
-    #   - default
-    restart: always
-    environment:
-      WORDPRESS_DB_HOST: mysql:8091
-      WORDPRESS_DB_USER: root123
-      WORDPRESS_DB_PASSWORD: azerty
-      WORDPRESS_DB_NAME: mydb
-    volumes:
-      - wordpress_data:/var/www/html
 
 volumes:
-  mysql_db_data_container: {}
-  wordpress_data: {}
+  db_data: {}
