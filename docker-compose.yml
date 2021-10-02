@@ -17,6 +17,15 @@ services:
       - "8000:80"
     restart: always
 
+  phpmyadmin:
+    build: ./phpmyadmin
+    container_name: pma
+    links:
+      - db
+    restart: always
+    ports:
+      - 8081:80
+
 volumes:
   db_data: { }
   wordpress_data: { }
