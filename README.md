@@ -1,4 +1,4 @@
-# Cloning the repo from Git hub
+# Cloning the repo from GitHub
 
 - With SSH :
 > git clone git@github.com:maroua-j/TP-DOCKER.git
