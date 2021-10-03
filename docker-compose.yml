@@ -28,6 +28,16 @@ services:
       - "80:80"
     # Always restart the container if it stops
     restart: always
+    networks:
+      - web
+    labels:
+      - "traefik.enable=true"
+      - "traefik.frontend.rule=Host:tp-pmn.fr"
+      - "traefik.port=2368"
+      - "traefik.docker.network=web"
+    environment:
+      - NODE_ENV=production
+      - url=https://tp-pmn.fr
 
   # The phpmyadmin container
   phpmyadmin:
@@ -48,3 +58,7 @@ volumes:
   db_data: { }
   # The data persistence for WordPress
   wordpress_data: { }
+
+networks:
+  web:
+    external: true
