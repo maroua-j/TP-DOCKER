@@ -23,9 +23,9 @@ services:
     # Data persistence
     volumes:
       - wordpress_data:/var/www/html
-    # Set the port of the localhost container to 8000
+    # Set the port of the localhost container to 80
     ports:
-      - "8000:80"
+      - "80:80"
     # Always restart the container if it stops
     restart: always
 

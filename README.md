@@ -16,7 +16,7 @@ To create a MySQL container, a Wordpress container and a Phpmyadmin container wi
 
 The MySQL server starts on port 3306
 
-The Wordpress starts on port 8000 (localhost:8000)
+The Wordpress starts on port 80 (localhost:80)
 
 The Phpmyadmin starts on port 8081 (localhost:8081)
 
