@@ -43,13 +43,13 @@ Git hub : https://github.com/maroua-j/TP-DOCKER
 Docker hub images :
 
 - Database MySQL : 
-> docker pull marouajf/db
+> docker pull marouajf/db:pmn
 
 - Phpmyadmin : 
-> docker pull marouajf/pma
+> docker pull marouajf/pma:pmn
 
 - Wordpress : 
-> docker pull marouajf/wordpress
+> docker pull marouajf/wordpress:pmn
 
 # Tools used 
 
