@@ -6,11 +6,11 @@
 - With HTTPS :
 > git clone https://github.com/maroua-j/TP-DOCKER.git
 
-# Docker compose MYSQL & Wordpress & Phpmyadmin
+# Docker compose MySQL & Wordpress & Phpmyadmin
 
 The docker-compose.yml file takes care of downloading the images used in the project.
 
-To create a MYSQL container, a Wordpress container and a Phpmyadmin container with the docker-compose.yml :
+To create a MySQL container, a Wordpress container and a Phpmyadmin container with the docker-compose.yml :
 
 > docker compose up -d
 
@@ -40,7 +40,7 @@ Git hub : https://github.com/maroua-j/TP-DOCKER
 
 Docker hub images :
 
-- Database mysql : 
+- Database MySQL : 
 > docker pull marouajf/db
 
 - Phpmyadmin : 
