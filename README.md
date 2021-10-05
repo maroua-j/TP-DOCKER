@@ -38,7 +38,7 @@ http://localhost:8081/
 
 # Useful links
 
-Git hub : https://github.com/maroua-j/TP-DOCKER
+GitHub : https://github.com/maroua-j/TP-DOCKER
 
 Docker hub images :
 
