@@ -6,6 +6,10 @@
 - With HTTPS :
 > git clone https://github.com/maroua-j/TP-DOCKER.git
 
+# VPS + Domain Name (OVH)
+
+http://tp-pmn.fr
+
 # Docker compose MySQL & Wordpress & Phpmyadmin
 
 The docker-compose.yml file takes care of downloading the images used in the project.
