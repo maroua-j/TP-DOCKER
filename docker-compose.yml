@@ -1,16 +1,50 @@
+# Version of this docker-compose.yml
 version: "3.9"
 
+# Set the different container to build
 services:
+  # The MySQL container
   db:
-    image: mysql:5.7
+    # Set the MySQL directory on the project
+    build: ./mysql
+    # Data persistence
     volumes:
       - db_data:/var/lib/mysql
+    # Always restart the container if it stops
     restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: azerty
-      MYSQL_DATABASE: mydb
-      MYSQL_USER: root123
-      MYSQL_PASSWORD: azerty
 
+  # The WordPress container
+  wordpress:
+    # Set the WordPress directory on the project
+    build: ./wordpress
+    # The WordPress container depends on the MySQL container named "bd"
+    depends_on:
+      - db
+    # Data persistence
+    volumes:
+      - wordpress_data:/var/www/html
+    # Set the port of the localhost container to 80
+    ports:
+      - "80:80"
+    # Always restart the container if it stops
+    restart: always
+
+  # The phpmyadmin container
+  phpmyadmin:
+    # Set the WordPress directory on the project
+    build: ./phpmyadmin
+    # Link the phpmyadmin service to the MySQL database
+    links:
+      - db
+    # Always restart the container if it stops
+    restart: always
+    # Set the port of the localhost container to 8081
+    ports:
+      - "8081:80"
+
+# Volumes are the mechanism for persisting data
 volumes:
-  db_data: {}
+  # The data persistence for MySQL database
+  db_data: { }
+  # The data persistence for WordPress
+  wordpress_data: { }

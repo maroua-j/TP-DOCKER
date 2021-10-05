@@ -1,10 +1,17 @@
-# FROM mysql:latest
+# Select the version 5.7 of MySQL on Docker Hub
+FROM mysql:5.7
 
-# LABEL MAINTENER="Nicolas-Maroua"
+# Mainteners of the project
+LABEL MAINTENER="Nicolas-Maroua"
 
-# # ENV MYSQL_DATABASE mydb
-# # ENV MYSQL_ROOT_PASSWORD="azerty"
-# # ENV MYSQL_USER="root123"
-# # ENV MYSQL_PASSWORD="azerty"
+# Create a database "mydb"
+ENV MYSQL_DATABASE="mydb"
 
-# # EXPOSE 8091
+# Set the MySQL root password
+ENV MYSQL_ROOT_PASSWORD="azerty"
+
+# Set the MySQL username
+ENV MYSQL_USER="root123"
+
+# Set the MySQL password for user "root123"
+ENV MYSQL_PASSWORD="azerty"
