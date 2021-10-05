@@ -44,7 +44,7 @@ http://localhost:8081/
 
 GitHub : https://github.com/maroua-j/TP-DOCKER
 
-Docker hub images :
+Docker Hub :
 
 https://hub.docker.com/u/marouajf
 
